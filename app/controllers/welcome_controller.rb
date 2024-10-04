@@ -126,7 +126,8 @@ class WelcomeController < ApplicationController
 
       #SERVIDOR #DOCENTE
       # Somente esses serão aceitos
-      if ENV["SOMENTEACESSOLOCAL"] == false 
+      if ENV["SOMENTEACESSOLOCAL"] == "false"
+        temvinculoprofissional = true
         tipoVinc.save!
       else      
 
